@@ -1,0 +1,105 @@
+
+FullStack
+Login Logout
+Template
+Reactive Form
+Multiple langugae
+Testing app
+-----------------------
+production
+--------------
+Docker
+Nginx
+MEAN
+-----------
+Github
+
+----Not----
+Backend API
+DataBase
+
+
+----------
+Angular1 => Angular2=>Angula9
+
+----------
+//Building Block of Angular
+//Create First Component
+
+//////////////
+Node.JS 
+Github
+Visual Studio Code
+
+https://code.visualstudio.com/
+ https://github.com/ 
+https://nodejs.org/en/ 
+
+
+SPA => Single Page application
+
+
+Angular help to make single page appliication
+using component base structure with typescript
+
+
+local package /global package
+
+////////////////////////////////////
+Step to install package.json
+/////////////////////////////////
+
+**NodeJs must be install
+> navigate to folder where you want to generate the file using cmd
+> npm init
+> "answer all question"
+> type "yes"
+
+
+////////////////////////////////////
+Step to install local package
+/////////////////////////////////
+> navigate to folder where you want to generate the file using cmd
+> npm i packagename
+
+
+////////////////////////////////////
+Step to install Global package
+/////////////////////////////////
+
+#Window
+> Run cmd as admin
+> npm i -g @angular/cli
+
+
+#Mac/Linuc
+> Open Terminal
+> sudo npm i -g @angular/cli
+
+////////////////////////////////////
+Step to create Angular App
+/////////////////////////////////
+#Window
+//One Time//
+> Run cmd as admin
+> npm i -g @angular/cli
+
+//EveryTime//
+>navigate to folder where you want to generate the application using cmd
+>ng new appname
+>cd appname
+>npm start
+>localhost:4200
+
+-----------------------------------
+#Mac/Linux
+//One Time//
+> Open Terminal
+> sudo npm i -g @angular/cli
+
+//EveryTime//
+>navigate to folder where you want to generate the application using Terminal
+>ng new appname
+>cd appname
+>npm start
+>localhost:4200
