@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sapp"
+    }
+  },
+  "defaultProject": "sapp",
+  "cli": {
+    "analytics": false
+  }
 }

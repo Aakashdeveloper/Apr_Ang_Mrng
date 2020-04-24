@@ -103,3 +103,20 @@ Step to create Angular App
 >cd appname
 >npm start
 >localhost:4200
+
+
+/////////////
+Angular Building Block
+///////////////
+
+>Module=> Where we declare all things   (NgModule)
+>Component =>Contains HTML CSS Logic    {Component}
+>Pipe=> Run Time data manupulation       {Pipe,PipeTransform}
+>Services=> To Call the API(Dependency Injection) {Injectable}
+>Routig=> Nvigate between pages           {Routes,RRouterModule}
+>Directive=> Smalll portion of page        {Directive}
+  
+
+import
+@> decorator
+export
