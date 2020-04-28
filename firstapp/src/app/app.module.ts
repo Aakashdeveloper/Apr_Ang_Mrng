@@ -3,6 +3,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import { HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   // All your Module & Routing Will be declare here
@@ -13,7 +15,9 @@ import {AppComponent} from './app.component';
 
   // All Component, Pipe & Directive  Will be declare here
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent
   ],
 
   // One and One first component

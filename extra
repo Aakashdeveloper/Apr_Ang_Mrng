@@ -13,6 +13,7 @@ Nginx
 MEAN
 -----------
 Github
+Mock Api
 
 ----Not----
 Backend API
@@ -23,8 +24,9 @@ DataBase
 Angular1 => Angular2=>Angula9
 
 ----------
-//Building Block of Angular
-//Create First Component
+//Folder Walk Through
+//Create first page
+//Adding Css
 
 //////////////
 Node.JS 
@@ -120,3 +122,27 @@ Angular Building Block
 import
 @> decorator
 export
+
+angular.json > main.ts > app.module.ts > app.component.ts
+
+//////////////////////////////////////
+   File Walkthrough
+/////////////////////////////////////
+tslint.json ==> make strutcure of code
+tsconfig.spec.json => help to locate test files
+tsconfig.json => it will tell where is build code and which version to target
+tsconfig.app.json => to locate application file
+ReadMe.md => Detail Description of application
+package.json => used for Dependency, commands and small Description
+package-lock.json => used for child Dependency
+angular.json => fist file to run and locate all content of application
+.gitignore => thing we dont want to push to git
+.editorconfig => For editor standards
+src/style.css => main style file of application
+src/polyfills => help to render application of all browser
+src/index.html => first and only file that  will load  in browser
+src/favicon=> simple icon
+src/assets => for all static file images /videos/script
+src/environment => help to build for prod /dev 
+src/app => all development happen here
+src/main => this will help to locate main module
