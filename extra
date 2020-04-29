@@ -146,3 +146,17 @@ src/assets => for all static file images /videos/script
 src/environment => help to build for prod /dev 
 src/app => all development happen here
 src/main => this will help to locate main module
+
+////////
+Data Binding
+////////////
+one way
+> databinding  {{}}
+> poperty Binding []
+> event binding ()
+two way  [()]
+
+
+cli
+>Command line interface
+>ng g c hotels

@@ -5,6 +5,7 @@ import { HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HotelsComponent } from './hotels/hotels.component';
 
 @NgModule({
   // All your Module & Routing Will be declare here
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HotelsComponent
   ],
 
   // One and One first component
