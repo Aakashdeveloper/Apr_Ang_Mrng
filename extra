@@ -151,7 +151,7 @@ src/main => this will help to locate main module
 Data Binding
 ////////////
 one way
-> databinding  {{}}
+> databinding  {{}} > 
 > poperty Binding []
 > event binding ()
 two way  [()]
@@ -160,3 +160,6 @@ two way  [()]
 cli
 >Command line interface
 >ng g c hotels
+
+
+

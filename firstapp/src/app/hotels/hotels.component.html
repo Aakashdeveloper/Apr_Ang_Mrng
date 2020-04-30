@@ -1,14 +1,20 @@
-<div class="panel panel-primary">
-    <div class="panel-heading">
-        Hotels
+<div class='panel panel-primary'>
+    <div class='panel-heading'>
+        {{title}}
+        <br/>
+        {{description}}
     </div>
-    <div class="panel-body">
-        <div class="row">
-            <div class="table-responsive">
-                <table class="table">
+    <div class='panel-body'>
+        <div class='row'>
+            <div class='table-responsive'>
+                {{showImage}}
+                <table class='table'>
                     <thead>
                         <tr>
-                            <th><button class="btn btn-success">Show Image</button></th>
+                            <th><button class='btn btn-success'
+                            (click)="toggleImage()">
+                                {{showImage?'Hide Image':'Show Image'}}
+                            </button></th>
                             <th>Name</th>
                             <th>City</th>
                             <th>Price</th>
@@ -16,8 +22,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            
+                        <tr *ngFor="let rest of restaurants">
+                            <td> <img [src]="rest.thumb"  class="img-responsive"
+                            *ngIf="showImage"/></td>
+                           <td>{{rest.name}}</td> 
+                           <td>{{rest.city}}</td>
+                           <td>{{rest.min_price}}</td> 
+                           <td>{{rest.aggregate_rating}}</td> 
                         </tr>
                     </tbody>
                 </table>
