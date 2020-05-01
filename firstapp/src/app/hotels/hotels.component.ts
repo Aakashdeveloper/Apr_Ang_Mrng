@@ -9,6 +9,7 @@ export class HotelsComponent {
    title: string  = 'My Ang App';
    description: string = 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero';
    showImage: boolean = true;
+   userSearch;
    restaurants: any[] = [
     {
         id : '6360',
@@ -44,5 +45,6 @@ export class HotelsComponent {
 
   toggleImage(): void{
     this.showImage = !this.showImage;
+
   }
 }
