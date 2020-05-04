@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { MyUpperPipe } from './hotels/myupper.pipe';
 import { DiscountPipe } from './hotels/discount.pipe';
+import { ProductSearch } from './hotels/productSearch.pipe';
 
 @NgModule({
   // All your Module & Routing Will be declare here
@@ -25,7 +26,8 @@ import { DiscountPipe } from './hotels/discount.pipe';
     FooterComponent,
     HotelsComponent,
     MyUpperPipe,
-    DiscountPipe
+    DiscountPipe,
+    ProductSearch
   ],
 
   // One and One first component

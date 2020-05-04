@@ -1,3 +1,6 @@
+<h4>
+    Current discount Price is : {{discountPrice}} / {{message}}
+</h4>
 <div class='panel panel-primary'>
     <div class='panel-heading'>
         {{title}}
@@ -15,7 +18,7 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Search Ressult for {{userSearch}}</h3>
+                <h3>{{(restaurants | search:userSearch).length}} Search Ressult for {{userSearch}}</h3>
             </div>
         </div>
         <div class='row'>
@@ -35,13 +38,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let rest of restaurants">
+                        <tr *ngFor="let rest of restaurants | search:userSearch">
                             <td> <img [src]="rest.thumb"  class="img-responsive"
                             *ngIf="showImage"/></td>
                            <td>{{rest.name | MyUpper:'upper'}}</td> 
                            <td>{{rest.city | lowercase}}</td>
-                           <td>{{rest.min_price |discount | currency:'INR'}}</td> 
-                           <td>{{rest.aggregate_rating}} Star</td> 
+                           <td>{{rest.min_price | discount:discountPrice | currency:'INR'}}</td> 
+                           <td [ngStyle]="{'color':rest.aggregate_rating<4?'tomato':'skyblue'}">
+                               <h4>
+                                {{rest.aggregate_rating}} Star
+                               </h4></td> 
                         </tr>
                     </tbody>
                 </table>

@@ -6,8 +6,8 @@ import {Pipe, PipeTransform } from '@angular/core';
 
 
 export class DiscountPipe implements PipeTransform{
-    transform(value: number): number {
-        value = value - 10;
+    transform(value: number, userinput: number): number {
+        value = value - userinput;
         return value;
     }
 }
