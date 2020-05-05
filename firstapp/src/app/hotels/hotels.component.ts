@@ -171,6 +171,9 @@ export class HotelsComponent {
 
   toggleImage(): void{
     this.showImage = !this.showImage;
+  }
 
+  dataRecive(message: string): void {
+      this.description = message;
   }
 }

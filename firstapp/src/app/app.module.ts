@@ -10,6 +10,7 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { MyUpperPipe } from './hotels/myupper.pipe';
 import { DiscountPipe } from './hotels/discount.pipe';
 import { ProductSearch } from './hotels/productSearch.pipe';
+import { StarComponent } from './shared/star.component';
 
 @NgModule({
   // All your Module & Routing Will be declare here
@@ -27,7 +28,8 @@ import { ProductSearch } from './hotels/productSearch.pipe';
     HotelsComponent,
     MyUpperPipe,
     DiscountPipe,
-    ProductSearch
+    ProductSearch,
+    StarComponent
   ],
 
   // One and One first component

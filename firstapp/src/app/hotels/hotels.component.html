@@ -46,7 +46,8 @@
                            <td>{{rest.min_price | discount:discountPrice | currency:'INR'}}</td> 
                            <td [ngStyle]="{'color':rest.aggregate_rating<4?'tomato':'skyblue'}">
                                <h4>
-                                {{rest.aggregate_rating}} Star
+                                <app-star [rating]="rest.aggregate_rating"
+                                (ratingClicked)="dataRecive($event)"></app-star>
                                </h4></td> 
                         </tr>
                     </tbody>

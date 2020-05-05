@@ -162,4 +162,7 @@ cli
 >ng g c hotels
 
 
+parent --> Child [] (@Input)
+child --> parent () (@output)
 
+90/5*2
