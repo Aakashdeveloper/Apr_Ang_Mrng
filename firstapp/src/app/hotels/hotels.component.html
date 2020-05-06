@@ -24,7 +24,7 @@
         <div class='row'>
             <div class='table-responsive'>
                 {{showImage}}
-                <table class='table'>
+                <table class='table' *ngIf="restaurants && restaurants.length; else noData">
                     <thead>
                         <tr>
                             <th><button class='btn btn-success'
@@ -52,6 +52,9 @@
                         </tr>
                     </tbody>
                 </table>
+                <ng-template #noData> 
+                    <img src="../../assets/loading.gif"/>
+                </ng-template>
             </div>
         </div>
     </div>

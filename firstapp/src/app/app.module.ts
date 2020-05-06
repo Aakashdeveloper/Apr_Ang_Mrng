@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
 import {AppComponent} from './app.component';
@@ -11,6 +11,7 @@ import { MyUpperPipe } from './hotels/myupper.pipe';
 import { DiscountPipe } from './hotels/discount.pipe';
 import { ProductSearch } from './hotels/productSearch.pipe';
 import { StarComponent } from './shared/star.component';
+import { HotelsService } from './hotels/hotels.service';
 
 @NgModule({
   // All your Module & Routing Will be declare here
@@ -38,7 +39,9 @@ import { StarComponent } from './shared/star.component';
   ],
 
   // All Service
-  providers: []
+  providers: [
+    HotelsService
+  ]
 })
 
 
