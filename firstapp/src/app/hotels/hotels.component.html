@@ -41,7 +41,12 @@
                         <tr *ngFor="let rest of restaurants | search:userSearch">
                             <td> <img [src]="rest.thumb"  class="img-responsive"
                             *ngIf="showImage"/></td>
-                           <td>{{rest.name | MyUpper:'upper'}}</td> 
+                           <td>
+                               <a [routerLink]="['/hotels']">
+                                {{rest.name | MyUpper:'upper'}}
+                                </a>
+                              
+                            </td> 
                            <td>{{rest.city | lowercase}}</td>
                            <td>{{rest.min_price | discount:discountPrice | currency:'INR'}}</td> 
                            <td [ngStyle]="{'color':rest.aggregate_rating<4?'tomato':'skyblue'}">
@@ -57,5 +62,6 @@
                 </ng-template>
             </div>
         </div>
+   
     </div>
 </div>

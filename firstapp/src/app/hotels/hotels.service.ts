@@ -6,7 +6,7 @@ import { Observable} from 'rxjs';
 @Injectable()
 
 export class HotelsService {
-    private HotelUrl = 'https://developerfunnel.herokuapp.com/restaurants';
+    private HotelUrl = 'http://localhost:8900/restaurants';
     constructor(private http: HttpClient) {}
 
     getHotels(): Observable<IProduct[]>{

@@ -1,4 +1,5 @@
-var restaurants = [
+{
+ "restaurants":[
     {
         "id" : "6360",
         "name" : "Gulab",
@@ -152,3 +153,4 @@ var restaurants = [
         "rating_text" : "Good"
     }
     ]
+}

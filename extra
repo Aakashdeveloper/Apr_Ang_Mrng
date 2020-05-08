@@ -166,3 +166,6 @@ parent --> Child [] (@Input)
 child --> parent () (@output)
 
 90/5*2
+
+> npm i -g json-server 
+> json-server --watch db.json --port 8900

@@ -12,13 +12,18 @@ import { DiscountPipe } from './hotels/discount.pipe';
 import { ProductSearch } from './hotels/productSearch.pipe';
 import { StarComponent } from './shared/star.component';
 import { HotelsService } from './hotels/hotels.service';
+import { HomeComponent } from './home/home.component';
+import { OrdersComponent } from './orders/orders.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HotelDetailsComponent } from './hotels/hotel-details.component';
 
 @NgModule({
   // All your Module & Routing Will be declare here
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
 
   // All Component, Pipe & Directive  Will be declare here
@@ -30,7 +35,10 @@ import { HotelsService } from './hotels/hotels.service';
     MyUpperPipe,
     DiscountPipe,
     ProductSearch,
-    StarComponent
+    StarComponent,
+    HomeComponent,
+    OrdersComponent,
+    HotelDetailsComponent
   ],
 
   // One and One first component
