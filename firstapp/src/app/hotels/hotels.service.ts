@@ -12,9 +12,11 @@ export class HotelsService {
     getHotels(): Observable<IProduct[]>{
         return this.http.get<IProduct[]>(this.HotelUrl);
     }
+
+    getHotelDetails(id): Observable<IProduct[]>{
+        return this.http.get<IProduct[]>(`${this.HotelUrl}?id=${id}`);
+    }
 }
-
-
 
 
 /*

@@ -42,7 +42,9 @@
                             <td> <img [src]="rest.thumb"  class="img-responsive"
                             *ngIf="showImage"/></td>
                            <td>
-                               <a [routerLink]="['/hotels']">
+                               <a [routerLink]="['/hotels', rest.id]"
+                               
+                               >
                                 {{rest.name | MyUpper:'upper'}}
                                 </a>
                               
@@ -53,7 +55,8 @@
                                <h4>
                                 <app-star [rating]="rest.aggregate_rating"
                                 (ratingClicked)="dataRecive($event)"></app-star>
-                               </h4></td> 
+                               </h4>
+                            </td> 
                         </tr>
                     </tbody>
                 </table>
@@ -65,3 +68,8 @@
    
     </div>
 </div>
+
+
+<!--
+     [queryParams]="{name:rest.name,city:rest.city}"
+-->

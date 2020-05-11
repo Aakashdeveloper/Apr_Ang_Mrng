@@ -1,1 +1,17 @@
-<h1>Details Page</h1>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        <h1>{{details[0].name}}</h1>
+    </div>
+    <div class="panel-body">
+        <img [src]="details[0].thumb" style="height:300px;width:300px"/>
+        <h2>{{details[0].city}}</h2>
+        <h3>{{details[0].locality}}</h3>
+        <h2>{{details[0].rating_text|uppercase}}</h2>
+
+        <h2>
+            {{details[0].aggregate_rating}} Star
+        </h2> 
+
+        <h2>{{details[0].min_price| currency:'INR'}} for 2 person</h2>
+    </div>
+</div>
