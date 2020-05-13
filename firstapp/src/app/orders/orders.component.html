@@ -4,13 +4,47 @@
     </div>
     <div class="panel-body"  >
         <div class="row" >
-            <img src="https://i.ibb.co/2WnY7z6/Screenshot-2020-05-02-at-12-44-42-PM.png" 
-                 class="img-responsive center-block"
-                 style="max-height:300px;padding-bottom:50px"/>
+          <h2>Your order for {{details[0].name}}</h2>
         </div>
-        <div class="row"  >
-            <div class="text-center">Total Orders:10</div>
-           
+        <h3>Total Price is {{details[0].min_price/2 * quantity}}</h3>
+        <div class="row">
+            <h2>Please Enter Your Details</h2>
+            <form #form="ngForm" (submit)="submitOrder(form)">
+                <div class="form-group">
+                    <label for="orderId" class="control-label">
+                        OrderId
+                    </label>
+                    <input type="text" class="form-control"
+                    readonly>
+                </div>
+                <div class="form-group">
+                    <label for="orderId" class="control-label">
+                        Name
+                    </label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="orderId" class="control-label">
+                        Address
+                    </label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="orderId" class="control-label">
+                        Email
+                    </label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="orderId" class="control-label">
+                        Phone
+                    </label>
+                    <input type="text" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">
+                    Confrim Order
+                </button>
+            </form>
         </div>
     </div>
 </div>

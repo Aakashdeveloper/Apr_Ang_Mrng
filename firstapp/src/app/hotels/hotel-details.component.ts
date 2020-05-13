@@ -9,9 +9,11 @@ import { HotelsService } from './hotels.service';
 export class HotelDetailsComponent implements OnInit {
     id: number;
     details: any[];
+    quntity: number;
 
     constructor(private route: ActivatedRoute,
-                private hotelsService: HotelsService) {
+                private hotelsService: HotelsService,
+                private router: Router) {
 
     }
 
@@ -21,6 +23,9 @@ export class HotelDetailsComponent implements OnInit {
             .subscribe((data) => this.details = data);
     }
 
+    onBack(): void{
+       this.router.navigate(['/hotels']);
+    }
 }
 
 

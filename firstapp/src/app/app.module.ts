@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { OrdersComponent } from './orders/orders.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HotelDetailsComponent } from './hotels/hotel-details.component';
+import { OrderService } from './orders/order.service';
 
 @NgModule({
   // All your Module & Routing Will be declare here
@@ -48,7 +49,8 @@ import { HotelDetailsComponent } from './hotels/hotel-details.component';
 
   // All Service
   providers: [
-    HotelsService
+    HotelsService,
+    OrderService
   ]
 })
 

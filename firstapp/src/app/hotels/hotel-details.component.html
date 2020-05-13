@@ -13,5 +13,17 @@
         </h2> 
 
         <h2>{{details[0].min_price| currency:'INR'}} for 2 person</h2>
+        <label>Number of person</label>
+        <input type="text" [(ngModel)]="quntity"/>
+        <div>
+            <a class="btn btn-success" 
+            [routerLink]="['/orders', details[0].id]"
+            [queryParams]="{person:quntity}">
+            Place Order
+        </a> &nbsp;
+            <a class="btn btn-danger"
+            (click)="onBack()"
+            >Back</a>
+        </div>
     </div>
 </div>

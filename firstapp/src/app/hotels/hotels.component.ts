@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { IProduct } from './hotel.model';
 import { HotelsService } from './hotels.service';
 
@@ -7,7 +7,7 @@ import { HotelsService } from './hotels.service';
   templateUrl: './hotels.component.html',
   styleUrls: ['./hotels.component.css']
 })
-export class HotelsComponent implements OnInit, OnChanges, OnDestroy {
+export class HotelsComponent implements OnInit, OnChanges {
    title: string  = 'My Ang App';
    description: string = 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero';
    showImage: boolean = true;
@@ -30,9 +30,6 @@ export class HotelsComponent implements OnInit, OnChanges, OnDestroy {
     console.log('In Side ngOnChanges');
    }
 
-   ngOnDestory(){
-    console.log('In Side ngOnDestory');
-   }
 
 
   toggleImage(): void{
