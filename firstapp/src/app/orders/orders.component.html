@@ -8,6 +8,7 @@
         </div>
         <h3>Total Price is {{details[0].min_price/2 * quantity}}</h3>
         <div class="row">
+            <div class="container">
             <h2>Please Enter Your Details</h2>
             <form #form="ngForm" (submit)="submitOrder(form)">
                 <div class="form-group">
@@ -15,36 +16,52 @@
                         OrderId
                     </label>
                     <input type="text" class="form-control"
+                    name="orderId"
+                    [(ngModel)]="myUser.orderId"
+                    id="orderId"
                     readonly>
                 </div>
                 <div class="form-group">
-                    <label for="orderId" class="control-label">
+                    <label for="orderId" class="control-label"
+                    >
                         Name
                     </label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="firstname"
+                    [(ngModel)]="myUser.firstname"
+                    id="firstname">
                 </div>
                 <div class="form-group">
                     <label for="orderId" class="control-label">
                         Address
                     </label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"
+                     name="address"
+                    [(ngModel)]="myUser.address"
+                    id="address">
                 </div>
                 <div class="form-group">
                     <label for="orderId" class="control-label">
                         Email
                     </label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"
+                    name="email"
+                    [(ngModel)]="myUser.email"
+                    id="email">
                 </div>
                 <div class="form-group">
                     <label for="orderId" class="control-label">
                         Phone
                     </label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"
+                    name="phone"
+                    [(ngModel)]="myUser.phone"
+                    id="phone">
                 </div>
                 <button type="submit" class="btn btn-success">
                     Confrim Order
                 </button>
             </form>
+            </div>
         </div>
     </div>
 </div>
