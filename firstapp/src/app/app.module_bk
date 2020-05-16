@@ -3,13 +3,20 @@ import {BrowserModule} from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
-import { AppComponent} from './app.component';
+import {AppComponent} from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HotelsComponent } from './hotels/hotels.component';
+import { MyUpperPipe } from './hotels/myupper.pipe';
+import { DiscountPipe } from './hotels/discount.pipe';
+import { ProductSearch } from './hotels/productSearch.pipe';
+import { StarComponent } from './shared/star.component';
+import { HotelsService } from './hotels/hotels.service';
 import { HomeComponent } from './home/home.component';
+import { OrdersComponent } from './orders/orders.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HotelModule } from './hotels/hotel.module';
-import { OrderModule } from './orders/order.module';
+import { HotelDetailsComponent } from './hotels/hotel-details.component';
+import { OrderService } from './orders/order.service';
 
 @NgModule({
   // All your Module & Routing Will be declare here
@@ -17,9 +24,7 @@ import { OrderModule } from './orders/order.module';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule,
-    HotelModule,
-    OrderModule
+    AppRoutingModule
   ],
 
   // All Component, Pipe & Directive  Will be declare here
@@ -27,7 +32,14 @@ import { OrderModule } from './orders/order.module';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HotelsComponent,
+    MyUpperPipe,
+    DiscountPipe,
+    ProductSearch,
+    StarComponent,
+    HomeComponent,
+    OrdersComponent,
+    HotelDetailsComponent
   ],
 
   // One and One first component
@@ -36,8 +48,12 @@ import { OrderModule } from './orders/order.module';
   ],
 
   // All Service
-  providers: []
+  providers: [
+    HotelsService,
+    OrderService
+  ]
 })
+
 
 export class AppModule {
 

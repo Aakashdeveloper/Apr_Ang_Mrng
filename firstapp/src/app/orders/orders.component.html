@@ -21,14 +21,23 @@
                     id="orderId"
                     readonly>
                 </div>
-                <div class="form-group">
+                <div class="form-group" [class.has-error]="firstName.invalid">
                     <label for="orderId" class="control-label"
                     >
                         Name
                     </label>
                     <input type="text" class="form-control" name="firstname"
+
                     [(ngModel)]="myUser.firstname"
-                    id="firstname">
+                    required
+                    id="firstname"
+                    #firstName="ngModel">
+
+                     <!--h2>{{firstName.invalid}}</h2-->
+                    <!--h2>{{firstName.className}}</h2-->
+                </div>
+                <div class="alert alert-danger" *ngIf="firstName.invalid">
+                    FirstName is required
                 </div>
                 <div class="form-group">
                     <label for="orderId" class="control-label">
@@ -39,23 +48,33 @@
                     [(ngModel)]="myUser.address"
                     id="address">
                 </div>
-                <div class="form-group">
+                <div class="form-group" [class.has-error]="Email.invalid">
                     <label for="orderId" class="control-label">
                         Email
                     </label>
                     <input type="text" class="form-control"
                     name="email"
                     [(ngModel)]="myUser.email"
+                    pattern="^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-z]{2,5})$"
+                    #Email="ngModel"
                     id="email">
                 </div>
-                <div class="form-group">
+                <div class="alert alert-danger" *ngIf="Email.invalid">
+                    Enter Valid Email
+                </div>
+                <div class="form-group" [class.has-error]="Phone.invalid">
                     <label for="orderId" class="control-label">
                         Phone
                     </label>
                     <input type="text" class="form-control"
                     name="phone"
                     [(ngModel)]="myUser.phone"
+                    minlength="10"
+                    #Phone="ngModel"
                     id="phone">
+                </div>
+                <div class="alert alert-danger" *ngIf="Phone.invalid">
+                    Min length is 10
                 </div>
                 <button type="submit" class="btn btn-success">
                     Confrim Order

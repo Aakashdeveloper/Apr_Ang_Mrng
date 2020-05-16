@@ -15,7 +15,7 @@ export class OrdersComponent implements OnInit {
   quantity: number;
   totalPrice: number;
   details: any[];
-  myUser = new IUser(Math.floor(Math.random() * 1000), '', 'a@a.com', 'abc delhii', 436643 );
+  myUser = new IUser(Math.floor(Math.random() * 1000), 'John', 'a@a.com', 'abc delhii', 436643 );
 
   constructor(private route: ActivatedRoute,
               private orderService: OrderService) { }
@@ -36,6 +36,7 @@ export class OrdersComponent implements OnInit {
 
   submitOrder(form: NgForm): void {
     console.log(form.value);
+    
     this.orderService.placeOrder(form.value, this.totalPrice, this.details[0].name )
     .subscribe((data) =>  console.log('data submitted')) ;
   }
