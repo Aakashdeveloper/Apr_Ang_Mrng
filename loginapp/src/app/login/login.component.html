@@ -1,0 +1,41 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Login
+    </div>
+    <div class="panel-body">
+        <form #form="ngForm" (submit)="loginUser(form)">
+
+            <div class="form-group" [class.has-error]="Email.invalid">
+                <label for="orderId" class="control-label">
+                    Email
+                </label>
+                <input type="text" class="form-control"
+                name="email"
+                [(ngModel)]="myUser.email"
+                pattern="^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-z]{2,5})$"
+                #Email="ngModel"
+                id="email">
+            </div>
+            <div class="alert alert-danger" *ngIf="Email.invalid">
+                Enter Valid Email
+            </div>
+            <div class="form-group" [class.has-error]="Password.invalid">
+                <label for="orderId" class="control-label">
+                    Password
+                </label>
+                <input type="text" class="form-control"
+                name="password"
+                [(ngModel)]="myUser.password"
+                minlength="8"
+                #Password="ngModel"
+                id="password">
+            </div>
+            <div class="alert alert-danger" *ngIf="Password.invalid">
+                Min length is 8
+            </div>
+            <button type="submit" class="btn btn-success">
+               Login
+            </button>
+        </form>
+    </div>
+</div>  
