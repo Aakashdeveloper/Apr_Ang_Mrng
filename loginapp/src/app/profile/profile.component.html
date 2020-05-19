@@ -1,0 +1,24 @@
+<div class="panel panel-info">
+    <div class="panel panel-heading">
+        Profile
+    </div>
+    <div>
+        <button class="btn btn-danger" (click)="logout()">
+            Logout
+        </button>
+        <div class="jumbotron">
+            <h3>Hi {{userinfo.name}}</h3>
+            <h3>Your Email is {{userinfo.email}}</h3>
+            <h3>Your Role is {{userinfo.role}}</h3>
+        </div>
+        <h2>You have permission to {{userinfo.role==='admin' ? "Add new admin user":"View Your Profile"}}</h2>
+
+        <div *ngIf="userinfo.role==='admin'">
+            <button class="btn btn-success">
+                Add New User
+            </button>
+            <br/>
+            <h2>List of All user</h2>
+        </div>
+    </div>
+</div>

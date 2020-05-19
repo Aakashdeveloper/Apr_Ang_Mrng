@@ -7,11 +7,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
-    {path: 'regsiter', component: RegisterComponent },
+    {path: 'register', component: RegisterComponent },
     {path: 'login', component: LoginComponent },
     {path: 'profile', component: ProfileComponent },
     {path: 'admin', component: AdminComponent },
-    {path: '', redirectTo: 'regsiter', pathMatch: 'full' },
+    {path: '', redirectTo: 'register', pathMatch: 'full' },
 ];
 
 @NgModule({

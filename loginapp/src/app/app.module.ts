@@ -11,6 +11,9 @@ import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RegisterService } from './register/register.service';
+import { LoginService } from './login/login.service';
+import { ProfileService } from './profile/profile.service';
 
 
 @NgModule({
@@ -39,7 +42,11 @@ import { ProfileComponent } from './profile/profile.component';
   ],
 
   // All Service
-  providers: []
+  providers: [
+    RegisterService,
+    LoginService,
+    ProfileService
+  ]
 })
 
 export class AppModule {
