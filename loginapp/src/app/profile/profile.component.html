@@ -19,6 +19,25 @@
             </button>
             <br/>
             <h2>List of All user</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Emaiil</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let allusers of alluser">
+                        <td>{{allusers.name}}</td>
+                        <td>{{allusers.email}}</td>
+                        <td>{{allusers.role}}</td>
+                    </tr>
+                </tbody>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

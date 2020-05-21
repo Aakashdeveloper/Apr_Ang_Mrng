@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 
 export class ProfileComponent implements OnInit{
     userinfo;
+    alluser;
 
     constructor(private router: Router,
                 private profileService: ProfileService){}
@@ -16,6 +17,9 @@ export class ProfileComponent implements OnInit{
     ngOnInit(): void {
         this.profileService.getUserInfo()
             .subscribe((data) => this.userinfo = data);
+
+        this.profileService.getAllUser()
+            .subscribe((data) => this.alluser = data);
     }
 
     logout(): void{
@@ -23,5 +27,6 @@ export class ProfileComponent implements OnInit{
         localStorage.removeItem('_1ux');
         this.router.navigate(['/login']);
     }
+
 
 }

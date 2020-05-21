@@ -14,6 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterService } from './register/register.service';
 import { LoginService } from './login/login.service';
 import { ProfileService } from './profile/profile.service';
+import { ProfileGaurdService } from './profile-gaurd.service';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ProfileService } from './profile/profile.service';
   providers: [
     RegisterService,
     LoginService,
-    ProfileService
+    ProfileService,
+    ProfileGaurdService
   ]
 })
 
