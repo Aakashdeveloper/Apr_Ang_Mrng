@@ -20,8 +20,7 @@ import { SharedModule } from '../shared/shared.module';
         MyUpperPipe,
         DiscountPipe,
         ProductSearch,
-        HotelDetailsComponent,
-        StarComponent
+        HotelDetailsComponent
 
     ],
     providers: [

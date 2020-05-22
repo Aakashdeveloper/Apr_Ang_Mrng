@@ -1,0 +1,52 @@
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        Reactive Forms
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" (ngSubmit)="save()"
+        [formGroup]="surveyForm">
+            <div class="form-group">
+              <label class="col-md-2 control-label">FirstName</label>
+              <div class="col-md-8" [ngClass]="{'has-error':(!surveyForm.get('firstName').valid)}">
+                  <input type="text" class="form-control" id="fname"
+                  formControlName="firstName"/>
+                  <span class="help-block" *ngIf="(surveyForm.get('firstName').errors)">
+                    <span  *ngIf="(surveyForm.get('firstName').errors.required)">
+                        First Name is Required
+                    </span> 
+                    <span  *ngIf="(surveyForm.get('firstName').errors.minlength)">
+                        First Name min length is 3
+                    </span> 
+                  </span>
+              </div> 
+            </div>
+            <div class="form-group">
+              <label class="col-md-2 control-label">Email</label>
+              <div class="col-md-8" [ngClass]="{'has-error':(!surveyForm.get('email').valid)}">
+                <input type="text" class="form-control" id="email"
+                formControlName="email"/>
+                <span class="help-block" *ngIf="(surveyForm.get('email').errors)">
+                  <span  *ngIf="(surveyForm.get('email').errors.required)">
+                      Email is Required
+                  </span> 
+                  <span  *ngIf="(surveyForm.get('email').errors.pattern)">
+                      Enter valid Email
+                  </span> 
+                </span>
+                </div> 
+            </div>
+              <br/>
+              <div class="form-group">
+                  <div class="col-md-4 col-md-offset-2">
+                      <span>
+                          <button type="submit"
+                          class="btn btn-success"
+                          [disabled]="!surveyForm.valid">
+                          Submit
+                        </button>
+                      </span>
+                  </div>
+              </div>
+        </form>
+    </div>
+</div>
